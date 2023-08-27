@@ -9,8 +9,8 @@ function createContact() {
     address.textContent = 'Location: Egnatia Str. 86, Thessaloniki, Greece'
   
     const restaurantLocation = document.createElement('img')
-    restaurantLocation.src = 'images/restaurant-location.png'
-    restaurantLocation.alt = 'Mozzafiato restaurant location'
+    restaurantLocation.src = '/images/restaurant-location.png'
+    restaurantLocation.alt = 'Cosmic Cafe Location Image'
     restaurantLocation.style.width = '50%'
   
     contact.appendChild(phoneNumber)
