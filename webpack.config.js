@@ -1,27 +1,18 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry:  {
-    index: './src/index.js',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Cosmic Café',
-    }),
-  ],
+  mode: 'development', // or 'production' or 'none'
+  entry: './src/index.js', // Your entry JavaScript file
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: '/',
+    filename: 'bundle.js', // Output bundled file name
+    path: path.resolve(__dirname, 'dist'), // Output directory
   },
-  optimization: {
-    runtimeChunk: 'single',
+  module: {
+    rules: [
+      {
+        test: /\.css$/, // Apply loader to .css files
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
 };

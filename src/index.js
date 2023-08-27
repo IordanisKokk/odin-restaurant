@@ -1,18 +1,7 @@
-import _ from 'lodash';
+import initializeWebsite from "./website"
 
-import { header } from '/components/layout/header';
-import { footer } from '/components/layout/footer';
+import '/src/styles.css'
 
-function component() {
-    const element = document.createElement('div');
+initializeWebsite();
 
-    element.classList.add('main-container');
-
-    element.innerHTML = 'MAIN CONTAINER';
-
-    return element;
-}
-
-document.body.appendChild(header());
-document.body.appendChild(component());
-document.body.appendChild(footer());
+console.log('HW')

@@ -1,28 +1,20 @@
 {
   "name": "odin-restaurant",
   "version": "1.0.0",
-  "description": "front-page of a restaurant website",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open",
-    "server": "node server.js",
-    "build": "webpack"
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com/IordanisKokk/odin-restaurant"
-  },
-  "author": "@IordanisKokk",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
-  },
-  "dependencies": {
-    "html-webpack-plugin": "^5.5.3",
-    "lodash": "^4.17.21"
+    "webpack-cli": "^5.1.4"
   }
 }
